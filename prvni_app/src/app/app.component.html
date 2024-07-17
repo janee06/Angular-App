@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PrvniApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jana Bočková - Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  
+
+
+<header id="header" class="header">
+  <div class="logo">
+      <h2>Jana Bočková</h2>
+  </div>
+
+  <div class="hamburger">
+      <i class="closeIcon"><span class="material-symbols-outlined"> close </span></i>
+      <i class="menuIcon"><span class="material-symbols-outlined"> view_headline </span></i>
+  </div>
+  <nav class="links">
+      <ul class="menu">
+          <li><a class="menuItem" routerLink="HomePage">Home</a></li>
+          <li><a class="menuItem" routerLink="AboutPage">About</a></li>
+          <li><a class="menuItem" routerLink="ProjectPage">Projects</a></li>
+          <li><a class="menuItem" routerLink="ContactPage">Contact me</a></li>
+      </ul>
+  </nav>
+</header>
+<section class="main" id="main">
+    <div class="text">
+        <p>Welcome to my portfolio</p>
+        <h2>Hi, I am Jane</h2>
+        <p>
+            Hi! I'm a student fascinated by the world of IT.<br />
+            I'm just starting out, but I'm eager to learn
+        </p>
+        <div class="buttons-container">
+            <div class="contactbuttons">
+                <a href="#contact">Contact me</a>
+            </div>
+            <div class="projectsbuttons">
+                <a routerLink="ProjectPage">My projects</a>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <img ngSrc="images/IMG_20230726_222755(1).jpg" fill>
+    </div>
+</section>
+
+<router-outlet/>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+.about {
+          background-color: #a0a8f5;
+          margin-top: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .aboutText {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 60px;
+          color: white;
+          height: 800px;
+      }
+      .about h1 {
+          margin-bottom: 25px;
+          font-size: 3.5rem;
+      }
+      .about p {
+          margin-bottom: 25px;
+          font-size: 1.5rem;
+      }
+      
+      .aboutImg {
+          display: block;
+          margin-left: 300px;
+      }
+      .aboutImg img {
+          height: 450px;
+          min-width: 400px;
+          object-fit: cover;
+          border-radius: 25px;
+          box-shadow: 10px 10px 3px #3d4586;
+          margin: 50px;
+      }
+      
+      .hireMe-container {
+          display: flex;
+          border-radius: 45px 45px 45px 45px;
+          margin-top: 10px;
+          margin-right: 20px;
+      }
+      .hireMe {
+          padding: 25px 75px;
+          background-color:#1e024a ;
+          color: white;
+          border: none;
+          border-radius: 15px;
+          cursor: pointer;
+          font-size: 30px;
+          box-shadow: 7px 7px 2px #3d4586;
+      }
+      .hireMe:hover {
+          color:#a0a8f5 ;
+      }
