@@ -1,3 +1,6 @@
+.body{
+          height: 850px;
+}
 .main {
           max-width: 500px;
           margin: 40px auto;
@@ -5,6 +8,7 @@
           background-color: #1e024a;
           border: 1px solid #3d4586;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          color: white;
         }
         
         .main h1 {

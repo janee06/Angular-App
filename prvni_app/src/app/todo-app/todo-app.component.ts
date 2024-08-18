@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 @Component({
-  selector: 'app-root',
+  selector: 'app-todo-app',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [CommonModule],
+  templateUrl: './todo-app.component.html',
+  styleUrl: './todo-app.component.scss'
 })
-export class AppComponent {
+export class TodoAppComponent {
   componentTitle = "My To Do List";
 
   filter: "all" | "active" | "done" = "all";
@@ -32,7 +31,7 @@ export class AppComponent {
     if (!description) return;
 
     this.allItems.unshift({
-      description,
+      description: description,
       done: false
     });
     this.saveItems();

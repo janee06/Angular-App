@@ -3,6 +3,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { TodoAppComponent } from './todo-app/todo-app.component';
 
 export const routes: Routes = [
  {
@@ -21,5 +22,9 @@ export const routes: Routes = [
  {
           path:"ContactPage",
           component: ContactPageComponent
+ },
+ {
+          path: "TodoApp",
+          component: TodoAppComponent
  }
 ];
