@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-todo-app',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './todo-app.component.html',
-  styleUrl: './todo-app.component.scss'
+  styleUrls: ['./todo-app.component.scss']
 })
 export class TodoAppComponent {
   componentTitle = "My To Do List";
 
   filter: "all" | "active" | "done" = "all";
+  searchQuery = '';
 
   allItems: any[] = [];
 
@@ -19,12 +21,21 @@ export class TodoAppComponent {
   }
 
   get items() {
-    if (this.filter === "all") {
-      return this.allItems;
+    let filteredItems = this.allItems;
+
+    if (this.filter !== "all") {
+      filteredItems = filteredItems.filter((item) =>
+        this.filter === "done" ? item.done : !item.done
+      );
     }
-    return this.allItems.filter((item) =>
-      this.filter === "done" ? item.done : !item.done
-    );
+
+    if (this.searchQuery) {
+      filteredItems = filteredItems.filter((item) =>
+        item.description.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    }
+
+    return filteredItems;
   }
 
   addItem(description: string) {
@@ -53,4 +64,3 @@ export class TodoAppComponent {
     localStorage.setItem('todo-items', JSON.stringify(this.allItems));
   }
 }
-
